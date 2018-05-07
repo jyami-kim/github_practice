@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <h3>지금까지 작성된 일기</h3>
+
+            <hr>
+            <% @posts.each do |post| %>
+                <p><a href="/posts/show/<%=post.id%>" style="color:#740606"><%=post.date%> : <%= post.title %></a></p>
+                <hr>
+            <%end%>
+        </div>
+    </body>
+</htrml>

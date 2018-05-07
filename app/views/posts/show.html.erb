@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <h3 style="color:#740606"><%=@post.date%>의 일기</h3>
+            <hr>
+            <h5>제목 : <%= @post.title%></h5>
+            <br>
+            <p>내용 : <%= @post.content%></p>
+
+            <br><br><br><hr>
+            <div style="margin-left:800px">
+                <button type="button" class="btn btn-outline-danger" href = "/posts/index"> <a href = "/posts/index" style="color:#740606">목록</button>
+                <button type="button" class="btn btn-outline-danger"><a href = "/posts/edit/<%= @post.id%>" style="color:#740606">수정</button>
+                <button type="button" class="btn btn-outline-danger"><a href = "/posts/destroy/<%= @post.id%>" data-confirm="진짜로 삭제 하시겠어요?" data-method="post" style="color:#740606">삭제</button>
+
+            </div>
+        </div>
+    </body>
+</htrml>
